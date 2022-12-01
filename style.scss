@@ -1,0 +1,176 @@
+/*====================
+    Variables
+====================*/
+// cp - color primary
+// cs - color neutral
+
+$cp: #546c9b;
+$cs: #e1cec5;
+$ca-1: #bcd4d2;
+$ca-2: #cb715d;
+
+$font-lg: 2.6rem;
+$font-md: 2rem;
+$font-sm: 1.4rem;
+/*====================
+    End Variables
+====================*/
+
+.primary { color: $cp; }
+.secondary { color: $cs; }
+.accent-1 { color: $ca-1; }
+.accent-2 { color: $ca-2; }
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url(/helpers.css);
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  // display: grid;
+  place-items: center;
+  height: 100vh;
+
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: $font-md;
+  font-weight: 400;
+  color: $cp;
+  box-sizing: border-box;
+
+  letter-spacing: 0.5px;
+  background: $cs;
+
+  scroll-behavior: smooth;
+}
+
+.cover {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  background: #e1cec5;
+  z-index: 100;
+}
+
+@media only screen and (min-width: 769px) {
+  .cover { display: grid; }
+  .header, .main { display: none !important; }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin: 2rem;
+  padding-top: 1rem;
+  background: #ffffff70;
+  border-radius: 1rem;
+
+  &__title h1 { font-size: 4rem; }
+  &__title h2 { font-size: 2.4rem; }
+}
+
+.main {
+  padding: 2rem; 
+  padding-top: unset;
+
+  .note {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: $font-sm;
+    color: white;
+    background: $ca-2;
+    border-radius: 1rem;
+  }
+}
+
+.set {
+  margin-bottom: 4rem;
+
+  &-amount {
+    padding: .5rem 1rem;
+    color: $ca-1;
+    background-color: $cp;
+    border-radius: 10rem;
+  }
+
+  &-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    color: darken($ca-1, $amount: 30);
+    background-color: $ca-1;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 3px rgba($ca-2, $alpha: .5);
+    
+    &--item {
+      position: relative;
+      flex: 1 0 48%;
+      min-width: 1rem;
+
+      img {
+        position: relative;
+        width: -webkit-fill-available;
+        border-radius: .6rem;
+      }
+
+      &:nth-child(3) {
+        flex-grow: unset;
+        margin-top: 1rem;
+      }
+    }
+
+    &--price {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.2rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: 10rem;
+      color: darken($cp, $amount: 10);
+      background: rgba($cp, $alpha: .5);
+      z-index: 10;
+    }
+
+    &__shop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+
+      &--item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+      
+        background: rgba($ca-2, $alpha: .8);
+        color: darken($color: $ca-2, $amount: 15);
+        text-decoration: unset;
+        padding: .5rem;
+        border-radius: 10rem;
+
+        img {
+          width: 1.7rem;
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+  }
+}

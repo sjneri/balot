@@ -1,0 +1,210 @@
+/*====================
+    Variables
+====================*/
+/*====================
+    End Variables
+====================*/
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url(/helpers.css);
+.primary {
+  color: #546c9b;
+}
+
+.secondary {
+  color: #e1cec5;
+}
+
+.accent-1 {
+  color: #bcd4d2;
+}
+
+.accent-2 {
+  color: #cb715d;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  place-items: center;
+  height: 100vh;
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #546c9b;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 0.5px;
+  background: #e1cec5;
+  scroll-behavior: smooth;
+}
+
+.cover {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  background: #e1cec5;
+  z-index: 100;
+}
+
+@media only screen and (min-width: 769px) {
+  .cover {
+    display: -ms-grid;
+    display: grid;
+  }
+  .header, .main {
+    display: none !important;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1;
+  margin: 2rem;
+  padding-top: 1rem;
+  background: #ffffff70;
+  border-radius: 1rem;
+}
+
+.header__title h1 {
+  font-size: 4rem;
+}
+
+.header__title h2 {
+  font-size: 2.4rem;
+}
+
+.main {
+  padding: 2rem;
+  padding-top: unset;
+}
+
+.main .note {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: white;
+  background: #cb715d;
+  border-radius: 1rem;
+}
+
+.set {
+  margin-bottom: 4rem;
+}
+
+.set-amount {
+  padding: .5rem 1rem;
+  color: #bcd4d2;
+  background-color: #546c9b;
+  border-radius: 10rem;
+}
+
+.set-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  color: #619692;
+  background-color: #bcd4d2;
+  border-radius: 1.2rem;
+  -webkit-box-shadow: 0 2px 3px rgba(203, 113, 93, 0.5);
+          box-shadow: 0 2px 3px rgba(203, 113, 93, 0.5);
+}
+
+.set-card--item {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 48%;
+          flex: 1 0 48%;
+  min-width: 1rem;
+}
+
+.set-card--item img {
+  position: relative;
+  width: -webkit-fill-available;
+  border-radius: .6rem;
+}
+
+.set-card--item:nth-child(3) {
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+  margin-top: 1rem;
+}
+
+.set-card--price {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 10rem;
+  color: #42557a;
+  background: rgba(84, 108, 155, 0.5);
+  z-index: 10;
+}
+
+.set-card__shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5rem;
+}
+
+.set-card__shop--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  background: rgba(203, 113, 93, 0.8);
+  color: #a64a35;
+  text-decoration: unset;
+  padding: .5rem;
+  border-radius: 10rem;
+}
+
+.set-card__shop--item img {
+  width: 1.7rem;
+  aspect-ratio: 1/1;
+}
+/*# sourceMappingURL=style.css.map */
